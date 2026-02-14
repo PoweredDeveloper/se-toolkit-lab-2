@@ -6,7 +6,7 @@ from JSON data files.
 
 from fastapi import FastAPI
 from app.settings import settings
-from app.routers import items, status
+from app.routers import items, outcomes, status
 
 app = FastAPI(
     title=settings.app_name,
@@ -17,3 +17,4 @@ app = FastAPI(
 
 app.include_router(status.router, tags=["status"])
 app.include_router(items.router, prefix="/items", tags=["items"])
+app.include_router(outcomes.router, prefix="/outcomes", tags=["outcomes"])
