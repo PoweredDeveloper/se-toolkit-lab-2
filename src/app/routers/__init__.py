@@ -1,3 +1,3 @@
-from app.routers import items, status
+from app.routers import items, outcomes, status
 
-__all__ = ["items", "status"]
+__all__ = ["items", "outcomes", "status"]
